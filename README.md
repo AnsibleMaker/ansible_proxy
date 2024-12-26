@@ -21,12 +21,12 @@ All VMs are in the same VPC and subnet with unrestricted security group rules fo
 
 ```ini
 [vm3]
-vm3 ansible_host=54.243.25.215 ansible_user=ubuntu
+vm3 ansible_host=<ip addr> ansible_user=< username> 
 
 [vm2]
-vm2 ansible_host=107.22.159.22 ansible_user=ubuntu
+vm2 ansible_host=<ip addr> ansible_user=< username>
 
 [vm3:vars]
-ansible_ssh_common_args='-o ProxyCommand="ssh -W %h:%p ubuntu@107.22.159.22 -i /home/ubuntu/.ssh/id_rsa -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null"'
+ansible_ssh_common_args='-o ProxyCommand="ssh -W %h:%p <user name>@<ip addr> -i /home/ubuntu/.ssh/id_rsa -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null"'
 ansible_ssh_private_key_file=/home/ubuntu/.ssh/id_rsa
 ansible_ssh_extra_args='-o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null'
