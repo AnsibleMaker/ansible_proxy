@@ -1,0 +1,60 @@
+PLAY [all] **************************************************************************************************************************************************
+
+TASK [Gathering Facts] **************************************************************************************************************************************
+ok: [vm3]
+ok: [vm2]
+ok: [new1]
+ok: [new3]
+ok: [new2]
+
+TASK [running below tasks] **********************************************************************************************************************************
+changed: [vm3]
+changed: [vm2]
+changed: [new1]
+changed: [new3]
+changed: [new2]
+
+TASK [printing the space] ***********************************************************************************************************************************
+ok: [vm3] => {
+    "msg": [
+        "               total        used        free      shared  buff/cache   available",
+        "Mem:           957Mi       350Mi       154Mi       920Ki       608Mi       607Mi",
+        "Swap:             0B          0B          0B"
+    ]
+}
+ok: [vm2] => {
+    "msg": [
+        "               total        used        free      shared  buff/cache   available",
+        "Mem:           957Mi       348Mi       199Mi       896Ki       564Mi       609Mi",
+        "Swap:             0B          0B          0B"
+    ]
+}
+ok: [new1] => {
+    "msg": [
+        "               total        used        free      shared  buff/cache   available",
+        "Mem:           957Mi       349Mi       444Mi       888Ki       315Mi       607Mi",
+        "Swap:             0B          0B          0B"
+    ]
+}
+ok: [new2] => {
+    "msg": [
+        "               total        used        free      shared  buff/cache   available",
+        "Mem:           957Mi       348Mi       445Mi       888Ki       315Mi       608Mi",
+        "Swap:             0B          0B          0B"
+    ]
+}
+ok: [new3] => {
+    "msg": [
+        "               total        used        free      shared  buff/cache   available",
+        "Mem:           957Mi       357Mi       435Mi       888Ki       315Mi       599Mi",
+        "Swap:             0B          0B          0B"
+    ]
+}
+
+PLAY RECAP **************************************************************************************************************************************************
+new1                       : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+new2                       : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+new3                       : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+vm2                        : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+vm3                        : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+
