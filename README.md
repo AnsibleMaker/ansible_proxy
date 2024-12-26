@@ -19,7 +19,7 @@ This repository demonstrates how to use Ansible to connect to a remote server (`
 
 All VMs are in the same VPC and subnet with unrestricted security group rules for testing.
 
-### Inventory File: `inventory`
+### Inventory File: `inventory.ini`
 
 ```ini
 [vm3]
