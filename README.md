@@ -2,6 +2,8 @@
 
 This repository demonstrates how to use Ansible to connect to a remote server (`vm3`) through a jump host (`vm2`) using SSH ProxyJump.
 
+![PROXY IMAGE]{proxy.jpeg}
+
 ## Prerequisites
 
 1. **Ansible Installed**: Ensure Ansible is installed on your machine. [Installation Guide](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
