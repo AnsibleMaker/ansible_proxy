@@ -1,0 +1,12 @@
+[vm3]
+vm3 ansible_host=54.243.25.215 ansible_user=ubuntu
+
+[vm2]
+vm2 ansible_host=107.22.159.22 ansible_user=ubuntu
+new1 ansible_host=174.129.49.39 ansible_user=ubuntu
+new2 ansible_host=107.21.193.156 ansible_user=ubuntu
+new3 ansible_host=3.87.158.3 ansible_user=ubuntu
+[vm2:vars]
+ansible_ssh_common_args='-o ProxyCommand="ssh -W %h:%p ubuntu@54.243.25.215 -i /home/ubuntu/.ssh/id_rsa -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null"'
+ansible_ssh_private_key_file=/home/ubuntu/.ssh/id_rsa
+ansible_ssh_extra_args='-o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null'
